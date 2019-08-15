@@ -1,7 +1,6 @@
 # Python Wordlist Generator
 
 > Creating Awesome Wordlist with Python.
-> You can check sample this file: [`output/wordlist.txt`](output/wordlist.txt)
 
 ### Usage
 
@@ -19,6 +18,10 @@ optional arguments:
                         minimum length of characters
   -max MAX_LENGTH, --max_length MAX_LENGTH
                         maximum length of characters
+  -rec RECURSIVE, --recursive RECURSIVE
+                        length of consecutive characters to exclude
+  -skip SKIPPING, --skipping SKIPPING
+                        length of skipping characters instance to skip when printing to standard output
   -out OUTPUT, --output OUTPUT
                         output of wordlist file.
 ```
@@ -30,7 +33,7 @@ $ python3 wgen.py -chr=abc -min=1 -max=4 -out=output/wordlist.txt
 
 # or
 
-$ python3 wgen.py --chars=abc --min_length=1 --max_length=4 --output=output/wordlist.txt
+$ python3 wgen.py --chars=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 --min_length=10 --max_length=10 --recursive=4 --skipping=500000 --output=output/wordlist.txt
 ```
 
 ### Disclaimer
